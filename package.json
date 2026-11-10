@@ -1,0 +1,26 @@
+{
+  "name": "brainbridge",
+  "version": "1.0.0",
+  "description": "BrainBridge: An AI-Powered Personalized Placement Readiness Platform",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,magenta \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server",
+    "db:init": "npm run db:init -w server",
+    "db:seed": "npm run db:seed -w server",
+    "db:build-seed": "npm run db:build-seed -w server",
+    "test": "node server/tests/api.test.js",
+    "verify:coding": "node server/tests/verify-coding.js"
+  },
+  "engines": {
+    "node": ">=18.18"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

@@ -1,0 +1,23 @@
+# Render Blueprint — single web service serving the API and the built React app.
+# Render dashboard → New → Blueprint → select this repository.
+services:
+  - type: web
+    name: brainbridge
+    runtime: node
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false          # paste your Neon connection string when prompted
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CLIENT_URL
+        sync: false          # e.g. https://brainbridge.onrender.com
+      - key: CODE_RUNNER
+        value: none          # change to judge0 and add JUDGE0_* variables to enable execution
