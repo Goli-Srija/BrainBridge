@@ -19,8 +19,9 @@ export const NAV = [
     { to: '/programming', label: 'Programming and DSA', icon: 'code' },
     { to: '/communication', label: 'Communication', icon: 'chat' },
     { to: '/brainbuddy', label: 'BrainBuddy', icon: 'chat' },
+    { to: '/focus-mode', label: 'Focus Mode', icon: 'clock' },
     { to: '/interview', label: 'Interview Preparation', icon: 'briefcase' },
-    { to: '/videos', label: 'Video Learning', icon: 'video' },
+   { to: '/videos', label: 'Learn Through Videos', icon: 'video' },
   ] },
   { group: 'Career', items: [
     { to: '/resume', label: 'Resume Builder', icon: 'file' },

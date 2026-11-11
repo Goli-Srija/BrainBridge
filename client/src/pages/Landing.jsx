@@ -7,7 +7,7 @@ const FEATURES = [
   ['calc', 'violet', 'Aptitude & reasoning', '2,100+ quant, logical and verbal questions with timed quizzes and explanations.'],
   ['code', 'teal', 'Coding practice', 'Original problems with an in-browser editor and real execution in Java, Python and C.'],
   ['chat', 'amber', 'Communication', 'Lessons and placement exercises with transparent rubric-based feedback.'],
-  ['file', 'indigo', 'Resume & ATS check', 'ATS-friendly templates, PDF export and a rule-based resume analyzer.'],
+  ['file', 'indigo','file', 'indigo', 'Resume & ATS check', 'Applicant Tracking System (ATS)-friendly templates, PDF export and a rule-based resume analyzer.'],
   ['mic', 'violet', 'Mock interviews', 'Four role-based tracks with progressive questions and a final report.'],
   ['building', 'teal', 'Company preparation', '27 companies with process guidance clearly separated from unverified facts.'],
   ['calendar', 'amber', 'Daily tracker', 'Goals, streaks, a study calendar and analytics based on real activity.'],

@@ -35,6 +35,7 @@ const Progress = lazy(() => import('./pages/Progress'));
 const Profile = lazy(() => import('./pages/Profile'));
 const Settings = lazy(() => import('./pages/Settings'));
 const Videos = lazy(() => import('./pages/Videos'));
+const FocusMode = lazy(() => import('./pages/FocusMode'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 /** Protected route: requires login, and completed onboarding for app pages. */
@@ -65,6 +66,7 @@ export default function App() {
         <Route path="/onboarding" element={<RequireAuth allowIncomplete><Onboarding /></RequireAuth>} />
         <Route element={<RequireAuth><AppLayout /></RequireAuth>}>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/focus-mode" element={<FocusMode />} />
           <Route path="/brainbuddy" element={<BrainBuddy />} />
           <Route path="/roadmap" element={<Roadmap />} />
           <Route path="/aptitude" element={<AptitudeSection section="quant" />} />

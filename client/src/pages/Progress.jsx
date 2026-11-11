@@ -3,7 +3,8 @@ import { useApi } from '../hooks/useApi';
 import { Async, PageHead, Progress as Bar, Ring, fmtDate } from '../components/ui';
 import { Breakdown, HBar, TrendLine } from '../components/Charts';
 
-const NAMES = { aptitude: 'Aptitude accuracy × volume', coding: 'Coding (difficulty-weighted)', learning: 'Lessons completed', communication: 'Communication exercises', interview: 'Mock interviews', assessments: 'Assessments', resume: 'Resume & ATS' };
+
+const NAMES = { aptitude: 'Aptitude accuracy × volume', coding: 'Coding (difficulty-weighted)', learning: 'Lessons completed', communication: 'Communication exercises', interview: 'Mock interviews', assessments: 'Assessments', resume: 'Resume & ATS (Applicant Tracking System)' };
 
 export default function ProgressPage() {
   const state = useApi('/progress');

@@ -30,7 +30,7 @@ export default function Videos() {
   const [tab, setTab] = useState('videos');
   return (
     <>
-      <PageHead title="Video Learning & Resources" subtitle="Hand-picked free videos, official documentation, practice platforms and career guidance. Written lessons remain available in every module." />
+      <PageHead title="Learn Through Videos & Resources" subtitle="Learn concepts through carefully selected videos, explore official documentation, practice platforms and career guidance." />
       <Tabs value={tab} onChange={setTab} tabs={[{ value: 'videos', label: 'Videos' }, { value: 'links', label: 'Courses, docs & platforms' }, { value: 'guides', label: 'Career guidance' }]} />
       {tab !== 'guides' ? (
         <Async state={state}>

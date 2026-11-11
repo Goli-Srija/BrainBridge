@@ -137,7 +137,7 @@ function Builder() {
                 </div>
               )}
               {REPEAT[section] && <Repeat k={section} items={current.data[section] || []} onChange={(v) => update((d) => ({ ...d, [section]: v }))} />}
-              <div className="alert alert-info mt"><div className="small"><strong>ATS tips:</strong> start bullets with action verbs (Built, Implemented, Optimised), add numbers ("used by 200 students"), keep it to one page, and avoid tables/images — this builder exports plain, selectable text.</div></div>
+              <div className="alert alert-info mt"><div className="small"><strong>Applicant Tracking System (ATS) Tips:</strong> start bullets with action verbs (Built, Implemented, Optimised), add numbers ("used by 200 students"), keep it to one page, and avoid tables/images — this builder exports plain, selectable text.</div></div>
             </div>
             <Preview data={current.data} template={tpl} />
           </div>
@@ -184,7 +184,7 @@ function Analyzer() {
         </div>
       </div>
       <div className="card">
-        {!result ? <div className="center-state"><h3>Your ATS report appears here</h3><p>Checks contact details, sections, keywords, impact, formatting and language.</p></div> : (
+        {!result ? <div className="center-state"><h3>Your Applicant Tracking System (ATS) report appears here</h3><p>Checks contact details, sections, keywords, impact, formatting and language.</p></div> : (
           <div className="stack">
             <div className="row" style={{ gap: 20 }}><Ring value={result.score} size={130} label="ATS score" /><div><h3>{result.fileName}</h3><p className="small muted">{result.wordCount} words · {result.pages} page(s) · role: {result.role}</p></div></div>
             <Alert kind="warn"><div className="small">{result.disclaimer}</div></Alert>
@@ -204,7 +204,7 @@ export default function ResumeBuilder() {
   const [tab, setTab] = useState('builder');
   return (
     <>
-      <PageHead title="Resume Builder & ATS Analyzer" subtitle="Build ATS-friendly resumes from five templates, export real text PDFs and check any resume against role keywords." />
+      <PageHead title="Resume Builder & ATS (Applicant Tracking System) Analyzer" subtitle="Build ATS-friendly resumes from five templates, export text-based PDFs and evaluate your resume against job-role keywords." />
       <Tabs value={tab} onChange={setTab} tabs={[{ value: 'builder', label: 'Resume builder' }, { value: 'ats', label: 'ATS analyzer' }]} />
       {tab === 'builder' ? <Builder /> : <Analyzer />}
     </>
