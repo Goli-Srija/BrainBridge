@@ -17,6 +17,7 @@ const mock = require('../controllers/mockController');
 const assessment = require('../controllers/assessmentController');
 const career = require('../controllers/careerController');
 const db = require('../database/db');
+const brainBuddy = require('../controllers/brainBuddyController');
 
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 5 * 1024 * 1024 } });
 const r = express.Router();
@@ -32,6 +33,10 @@ r.get('/portfolio/public/:slug', h(career.publicPortfolio));
 
 // ---------- protected ----------
 r.use(requireAuth);
+r.post('/brainbuddy/chat', h(brainBuddy.chat));
+r.get('/brainbuddy/conversations', h(brainBuddy.listConversations));
+r.get('/brainbuddy/conversations/:id', h(brainBuddy.getConversation));
+r.delete('/brainbuddy/conversations/:id', h(brainBuddy.deleteConversation));
 
 r.get('/auth/me', h(auth.me));
 r.put('/profile', h(auth.updateProfile));

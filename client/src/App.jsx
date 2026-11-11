@@ -9,6 +9,7 @@ import Onboarding from './pages/Onboarding';
 
 // Pages are lazy-loaded so the first load stays fast.
 const Dashboard = lazy(() => import('./pages/Dashboard'));
+const BrainBuddy = lazy(() => import('./pages/BrainBuddy'));
 const Roadmap = lazy(() => import('./pages/Roadmap'));
 const AptitudeSection = lazy(() => import('./pages/AptitudeSection'));
 const Quiz = lazy(() => import('./pages/Quiz'));
@@ -64,6 +65,7 @@ export default function App() {
         <Route path="/onboarding" element={<RequireAuth allowIncomplete><Onboarding /></RequireAuth>} />
         <Route element={<RequireAuth><AppLayout /></RequireAuth>}>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/brainbuddy" element={<BrainBuddy />} />
           <Route path="/roadmap" element={<Roadmap />} />
           <Route path="/aptitude" element={<AptitudeSection section="quant" />} />
           <Route path="/logical" element={<AptitudeSection section="logical" />} />

@@ -18,6 +18,7 @@ export const NAV = [
   { group: 'Skills', items: [
     { to: '/programming', label: 'Programming and DSA', icon: 'code' },
     { to: '/communication', label: 'Communication', icon: 'chat' },
+    { to: '/brainbuddy', label: 'BrainBuddy', icon: 'chat' },
     { to: '/interview', label: 'Interview Preparation', icon: 'briefcase' },
     { to: '/videos', label: 'Video Learning', icon: 'video' },
   ] },
@@ -83,8 +84,33 @@ export default function AppLayout() {
           <div className="spacer" />
           {minutes !== null && <span className="badge teal" title="Active study time tracked today"><Icon name="clock" size={13} />{minutes} min today</span>}
         </header>
+      
         <main className="content"><Outlet /></main>
       </div>
+
+      {location.pathname !== '/brainbuddy' && (
+        <button
+          onClick={() => navigate('/brainbuddy')}
+          title="Chat with BrainBuddy"
+          style={{
+            position: 'fixed',
+            right: 28,
+            bottom: 28,
+            zIndex: 1000,
+            padding: '14px 20px',
+            border: 'none',
+            borderRadius: 30,
+            background: 'linear-gradient(135deg,#7c3aed,#0d9488)',
+            color: '#fff',
+            fontWeight: 700,
+            cursor: 'pointer',
+            boxShadow: '0 5px 20px rgba(124,58,237,.3)',
+          }}
+        >
+          ✨ Ask BrainBuddy
+        </button>
+      )}
     </div>
   );
 }
+
